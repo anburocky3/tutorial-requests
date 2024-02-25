@@ -2,11 +2,13 @@ import express from "express";
 import rootRouter from "./routers/index.router.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 
 const server = express();
 const SERVER_PORT = 8888;
 dotenv.config();
 
+server.use(cors());
 server.use(express.json());
 server.use(rootRouter);
 

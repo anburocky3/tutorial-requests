@@ -5,7 +5,9 @@ const App = () => {
   const [requestData, setRequestData] = useState([]);
 
   async function fetchRequest() {
-    const requestAPIData = await fetch("http://localhost:8888/requests");
+    const requestAPIData = await fetch(
+      "https://tutorial-requests.onrender.com/requests"
+    );
     const data = await requestAPIData.json();
     setRequestData(data);
     console.log("it is working here!", data);

@@ -21,14 +21,17 @@ const CreateRequest = () => {
 
   const sendToServer = async (data) => {
     // All data will be validated!
-    const response = await fetch("http://localhost:8888/create", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      "https://tutorial-requests.onrender.com/create",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     if (response.status === 200) {
       alert("Your request has been posted! Thanks!");

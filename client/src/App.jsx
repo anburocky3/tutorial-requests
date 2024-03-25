@@ -64,23 +64,24 @@ const App = () => {
           </div>
         )}
 
-        {/* {requestData.map((list) => (
+        {requestData.map((list) => (
           <SuggestionList
             key={list._id}
             technology={list.technology}
             title={list.title}
             desc={list.desc}
             created_at={list.created_at}
+            id={list._id}
           />
-        ))} */}
+        ))}
 
-        <SuggestionList
+        {/* <SuggestionList
           key={1}
           technology={"Python"}
           title={"some tthing"}
           desc={"Some description"}
           created_at={"232323"}
-        />
+        /> */}
       </section>
     </div>
   );

@@ -7,6 +7,7 @@ const App = () => {
   async function fetchRequest() {
     const requestAPIData = await fetch(
       "https://tutorial-requests.onrender.com/requests"
+      // "http://localhost:8888/requests"
     );
     const data = await requestAPIData.json();
     setRequestData(data);
@@ -63,7 +64,7 @@ const App = () => {
           </div>
         )}
 
-        {requestData.map((list) => (
+        {/* {requestData.map((list) => (
           <SuggestionList
             key={list._id}
             technology={list.technology}
@@ -71,7 +72,15 @@ const App = () => {
             desc={list.desc}
             created_at={list.created_at}
           />
-        ))}
+        ))} */}
+
+        <SuggestionList
+          key={1}
+          technology={"Python"}
+          title={"some tthing"}
+          desc={"Some description"}
+          created_at={"232323"}
+        />
       </section>
     </div>
   );
